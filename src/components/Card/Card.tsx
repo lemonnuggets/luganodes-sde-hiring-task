@@ -21,7 +21,7 @@ export default function Card({ address, uniqueId, close }: Props) {
       {isSuccess && (
         <>
           <Tooltip content={data.address}>
-            <div className="title">{data.displayName}</div>
+            <div className="title mb-4 text-2xl">{data.displayName}</div>
           </Tooltip>
           <div className="users">Users: {data.users}</div>
           <div className="balance">
