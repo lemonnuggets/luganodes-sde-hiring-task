@@ -1,6 +1,6 @@
 import { exampleRouter } from "~/server/api/routers/example";
 import { createTRPCRouter } from "~/server/api/trpc";
-import { subscanRouter } from "./routers/subscan";
+import { stakeRouter } from "./routers/stake";
 
 /**
  * This is the primary router for your server.
@@ -9,7 +9,7 @@ import { subscanRouter } from "./routers/subscan";
  */
 export const appRouter = createTRPCRouter({
   example: exampleRouter,
-  subscan: subscanRouter,
+  stake: stakeRouter,
 });
 
 // export type definition of API

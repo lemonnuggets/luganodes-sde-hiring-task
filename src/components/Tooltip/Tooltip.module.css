@@ -1,0 +1,18 @@
+.tooltipWrapper {
+  position: relative;
+}
+.tooltip {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 10ch;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: none;
+}
+.tooltipWrapper:hover > .tooltip {
+  display: block;
+}
