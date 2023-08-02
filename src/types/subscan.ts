@@ -6,7 +6,7 @@ export type SubscanResponse<T> = {
 };
 export type AccountDisplay = {
   address: string;
-  display: string;
+  display: string | null;
   judgements: Array<Judgement>;
   account_index: string;
   identity: boolean;

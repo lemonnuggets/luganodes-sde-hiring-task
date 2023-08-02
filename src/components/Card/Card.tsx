@@ -54,7 +54,11 @@ export default function Card({ address, uniqueId, close }: Props) {
             </div>
             <div className="right col-span-3 flex w-full flex-col justify-between">
               <Tooltip content={data.address}>
-                <div className="title mb-4 text-4xl">{data.displayName}</div>
+                <div
+                  className={`${styles.title} mb-4 overflow-hidden overflow-ellipsis text-4xl`}
+                >
+                  {data.displayName ?? data.address}
+                </div>
               </Tooltip>
               <div className="data flex flex-col gap-5">
                 <div className="users grid grid-cols-5 items-center text-xl">

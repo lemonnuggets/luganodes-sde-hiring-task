@@ -18,3 +18,7 @@
     1 10%;
   border-bottom: solid var(--accent-color) var(--border-width);
 }
+
+.title {
+  max-width: 315px;
+}
