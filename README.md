@@ -32,18 +32,17 @@ Total Stake Counter application that allows users to track the total stake for t
 To start server.
 
 ```sh
-pnpm start
+pnpm dev
 ```
-
-![image](https://user-images.githubusercontent.com/63046776/222977855-76301ca4-1b7e-492f-bc0b-728d175376c9.png)
+![image](https://github.com/lemonnuggets/luganodes-sde-hiring-task/assets/63046776/998e5b76-79d4-4332-9733-3726c329918c)
 
 ## Contact
 
 [Adam Jijo](https://adamjijo.com) - [@adam_jijo](https://twitter.com/adam_jijo) - <hi@adamjijo.com>
 
-Project Link: [https://github.com/lemonnuggets/luganodes-sde-hiring-task](GitHub)
+Project Link: [GitHub](https://github.com/lemonnuggets/luganodes-sde-hiring-task)
 
-Hosted Link: [https://luganodes-sde-hiring-task.vercel.app/](Vercel)
+Hosted Link: [Vercel](https://luganodes-sde-hiring-task.vercel.app/)
 
 ## Acknowledgements
 
