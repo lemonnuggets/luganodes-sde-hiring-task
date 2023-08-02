@@ -37,8 +37,8 @@ export default function Card({ address, uniqueId, close }: Props) {
           >
             ⟳
           </button>
-          <div className="grid grid-cols-2">
-            <div className="left flex flex-col items-start">
+          <div className="grid grid-cols-5">
+            <div className="left col-span-2 flex flex-col items-start">
               <div className="flex h-full flex-col items-stretch justify-between gap-5">
                 <Image
                   src={asset.logoURI}
@@ -52,18 +52,20 @@ export default function Card({ address, uniqueId, close }: Props) {
                 </div>
               </div>
             </div>
-            <div className="right flex w-full flex-col justify-between">
+            <div className="right col-span-3 flex w-full flex-col justify-between">
               <Tooltip content={data.address}>
                 <div className="title mb-4 text-4xl">{data.displayName}</div>
               </Tooltip>
               <div className="data flex flex-col gap-5">
-                <div className="users grid grid-cols-2 text-xl">
-                  <div className="label text-2xl">Users</div>
-                  <div className="content">{data.users}</div>
+                <div className="users grid grid-cols-5 items-center text-xl">
+                  <div className="label col-span-2 text-2xl">Users</div>
+                  <div className={`${styles.content} col-span-3 px-2 py-3`}>
+                    {data.users}
+                  </div>
                 </div>
-                <div className="balance grid grid-cols-2 text-xl">
-                  <div className="label text-2xl">Balance</div>
-                  <div className="content">
+                <div className="balance grid grid-cols-5 items-center text-xl">
+                  <div className="label col-span-2 text-2xl">Balance</div>
+                  <div className={`${styles.content} col-span-3 px-2 py-3`}>
                     {data.balance.toFixed(3)} {uniqueId}
                   </div>
                 </div>
