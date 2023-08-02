@@ -5,15 +5,16 @@ import styles from "./Card.module.css";
 type Props = {
   address: string;
   uniqueId: string;
+  close: (address: string, unique_id: string) => void;
 };
-export default function Card({ address, uniqueId }: Props) {
+export default function Card({ address, uniqueId, close }: Props) {
   const { data, isLoading, isError, isSuccess } = api.stake.getData.useQuery({
     address,
     uniqueId,
   });
 
   return (
-    <div className={`${styles.card} min-h-100 rounded p-5`}>
+    <div className={`${styles.card} min-h-100 relative rounded p-5`}>
       {isLoading && <div className="loading">Loading...</div>}
       {isError && <div className="error">Error</div>}
       {isSuccess && (
@@ -23,6 +24,12 @@ export default function Card({ address, uniqueId }: Props) {
           </Tooltip>
           <div className="users">{data.users}</div>
           <div className="balance">{data.balance}</div>
+          <button
+            className="close absolute right-3 top-3 cursor-pointer font-extrabold text-red-700"
+            onClick={() => close(address, uniqueId)}
+          >
+            X
+          </button>
         </>
       )}
     </div>

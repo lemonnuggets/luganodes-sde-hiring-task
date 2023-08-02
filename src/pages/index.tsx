@@ -19,6 +19,14 @@ export default function Home() {
       uniqueId: "KSM",
     },
   ]);
+  function removeStakeInfo(address: string, uniqueId: string) {
+    setStakeInfos((prev) =>
+      prev.filter(
+        (stockInfo) =>
+          !(stockInfo.address === address && stockInfo.uniqueId === uniqueId)
+      )
+    );
+  }
   return (
     <>
       <Head>
@@ -38,6 +46,7 @@ export default function Home() {
             key={`${stakeInfo.address}-${stakeInfo.uniqueId}`}
             address={stakeInfo.address}
             uniqueId={stakeInfo.uniqueId}
+            close={removeStakeInfo}
           ></Card>
         ))}
         <AdditionCard

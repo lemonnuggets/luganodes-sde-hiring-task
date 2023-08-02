@@ -11,7 +11,7 @@ export default function AdditionCard({ onAdd }: Props) {
     <div className="card flex items-center justify-center rounded bg-slate-400 p-5">
       {!showForm && (
         <button
-          className="h-full w-full"
+          className="h-full w-full text-4xl font-bold"
           onClick={() => {
             setShowForm(true);
           }}
