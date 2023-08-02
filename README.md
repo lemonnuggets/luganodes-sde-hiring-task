@@ -34,7 +34,8 @@ To start server.
 ```sh
 pnpm dev
 ```
-![image](https://github.com/lemonnuggets/luganodes-sde-hiring-task/assets/63046776/998e5b76-79d4-4332-9733-3726c329918c)
+![image](https://github.com/lemonnuggets/luganodes-sde-hiring-task/assets/63046776/9e843d9e-da0e-4033-858a-277ec5bcd3b3)
+
 
 ## Contact
 
