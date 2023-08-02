@@ -1,18 +1,33 @@
 .tooltipWrapper {
+  cursor: default;
   position: relative;
 }
-.tooltip {
+
+.tooltipWrapper:hover::before {
   position: absolute;
-  bottom: 100%;
-  left: 50%;
-  transform: translateX(-50%);
-  max-width: 10ch;
+  content: attr(data-title);
+  background-color: #000;
+  border-radius: 4px;
+  text-align: center;
+  color: #fff;
+  top: -25px;
+  right: 50%;
+  padding: 3px 8px;
+  transform: translate(50%, -50%);
+  overflow-wrap: break-word;
 
   white-space: nowrap;
-  overflow: hidden;
   text-overflow: ellipsis;
-  display: none;
+  overflow: hidden;
+  max-width: 150px;
 }
-.tooltipWrapper:hover > .tooltip {
-  display: block;
+
+.tooltipWrapper:hover::after {
+  position: absolute;
+  content: "\25BC";
+  height: 1.25rem;
+  color: #000;
+  top: -12px;
+  left: 50%;
+  transform: scale(1.8, 1) translate(-33%, -50%);
 }
