@@ -6,10 +6,10 @@
 .tooltipWrapper:hover::before {
   position: absolute;
   content: attr(data-title);
-  background-color: #000;
+  background-color: var(--accent-color);
   border-radius: 4px;
   text-align: center;
-  color: #fff;
+  color: var(--font-color);
   top: -25px;
   right: 50%;
   padding: 3px 8px;
@@ -26,7 +26,7 @@
   position: absolute;
   content: "\25BC";
   height: 1.25rem;
-  color: #000;
+  color: var(--accent-color);
   top: -12px;
   left: 50%;
   transform: scale(1.8, 1) translate(-33%, -50%);

@@ -1,5 +1,6 @@
 import axios, { type AxiosInstance } from "axios";
 import { z } from "zod";
+import { assets } from "~/data/assets";
 import { env } from "~/env.mjs";
 import { createTRPCRouter, publicProcedure } from "~/server/api/trpc";
 import {
@@ -13,9 +14,9 @@ export const stakeRouter = createTRPCRouter({
     .input(z.object({ address: z.string(), uniqueId: z.string() }))
     .query(({ input }) => {
       switch (input.uniqueId) {
-        case DOT_ID:
+        case assets.DOT.uniqueId:
           return getSubscanData(polkadot, input.address, input.uniqueId);
-        case KSM_ID:
+        case assets.KSM.uniqueId:
           return getSubscanData(kusama, input.address, input.uniqueId);
         default:
           throw new Error("Invalid unique ID");
@@ -30,7 +31,6 @@ const polkadot = axios.create({
     "Content-Type": "application/json",
   },
 });
-const DOT_ID = "DOT";
 
 const kusama = axios.create({
   baseURL: "https://kusama.api.subscan.io/api",
@@ -39,7 +39,6 @@ const kusama = axios.create({
     "Content-Type": "application/json",
   },
 });
-const KSM_ID = "KSM";
 
 async function getSubscanData(
   instance: AxiosInstance,

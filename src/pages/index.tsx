@@ -40,7 +40,7 @@ export default function Home() {
       <h1 className="title mb-10 mt-10 text-center text-4xl font-bold">
         Luganodes Stake Counter
       </h1>
-      <main className="grid grid-cols-4 gap-4 p-8">
+      <main className="grid grid-cols-3 gap-4 p-8">
         {stakeInfos.map((stakeInfo) => (
           <Card
             key={`${stakeInfo.address}-${stakeInfo.uniqueId}`}
