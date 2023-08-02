@@ -8,9 +8,7 @@ export default function AdditionCard({ onAdd }: Props) {
   const [address, setAddress] = useState("");
   const [uniqueId, setUniqueId] = useState("DOT");
   return (
-    <div
-      className={`${styles.card} flex items-center justify-center rounded bg-slate-400 p-5`}
-    >
+    <div className={`${styles.card} flex items-center justify-center rounded`}>
       {!showForm && (
         <button
           className="h-full w-full text-4xl font-bold"
@@ -23,7 +21,7 @@ export default function AdditionCard({ onAdd }: Props) {
       )}
       {showForm && (
         <form
-          className={`${styles.form} grid gap-2`}
+          className={`${styles.form} m-5 grid items-center gap-4 text-2xl`}
           onSubmit={(e) => {
             e.preventDefault();
             onAdd(address, uniqueId);

@@ -1,11 +1,26 @@
 .card {
+  --border-width: 1px;
+  background-color: var(--card-color);
+  border-width: var(--border-width);
+  border-style: solid;
+  border-image: linear-gradient(to top, var(--accent-color), var(--card-color))
+    1 10%;
+  border-bottom: solid var(--accent-color) var(--border-width);
   min-height: 270px;
 }
 .form input,
 .form select {
   background-color: var(--bg-color);
   padding: 2px 5px;
+
+  --border-width: 1px;
+  background-color: var(--card-color);
+  border-width: var(--border-width);
+  border-style: solid;
+  border-image: linear-gradient(to top, var(--accent-color), var(--card-color))
+    1 10%;
+  border-bottom: solid var(--accent-color) var(--border-width);
 }
 .form label {
-  color: var(--bg-color);
+  /* color: var(--bg-color); */
 }
