@@ -44,7 +44,7 @@ export default function AdditionCard({ onAdd }: Props) {
             <option value="KSM">Kusama - KSM</option>
           </select>
           <input
-            className="col-span-2 cursor-pointer border-2 border-black"
+            className="col-span-2 mt-8 cursor-pointer border-2 border-black"
             type="submit"
             value="Add"
           />
