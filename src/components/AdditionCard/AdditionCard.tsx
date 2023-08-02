@@ -1,4 +1,5 @@
 import { useState } from "react";
+import styles from "./AdditionCard.module.css";
 type Props = {
   onAdd: (address: string, uniqueId: string) => void;
 };
@@ -10,7 +11,7 @@ export default function AdditionCard({ onAdd }: Props) {
     <div className="card flex items-center justify-center rounded bg-slate-400 p-5">
       {!showForm && (
         <button
-          className="m-auto w-1/2"
+          className="h-full w-full"
           onClick={() => {
             setShowForm(true);
           }}
@@ -20,18 +21,20 @@ export default function AdditionCard({ onAdd }: Props) {
       )}
       {showForm && (
         <form
-          className="form"
+          className={`${styles.form} grid gap-2`}
           onSubmit={(e) => {
             e.preventDefault();
             onAdd(address, uniqueId);
           }}
         >
+          <label htmlFor="address">Address</label>
           <input
             type="text"
             name="address"
             value={address}
             onChange={(e) => setAddress(e.target.value)}
           />
+          <label htmlFor="unique_id">Asset ID</label>
           <select
             name="unique_id"
             value={uniqueId}
@@ -40,7 +43,11 @@ export default function AdditionCard({ onAdd }: Props) {
             <option value="DOT">Polkadot - DOT</option>
             <option value="KSM">Kusama - KSM</option>
           </select>
-          <input type="submit" value="Add" />
+          <input
+            className="col-span-2 cursor-pointer border-2 border-black"
+            type="submit"
+            value="Add"
+          />
         </form>
       )}
     </div>
