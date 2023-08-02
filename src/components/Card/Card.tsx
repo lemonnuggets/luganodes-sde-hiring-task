@@ -8,11 +8,11 @@ type Props = {
   close: (address: string, unique_id: string) => void;
 };
 export default function Card({ address, uniqueId, close }: Props) {
-  const { data, isLoading, isError, isSuccess } = api.stake.getData.useQuery({
-    address,
-    uniqueId,
-  });
-
+  const { data, isLoading, isError, isSuccess, refetch } =
+    api.stake.getData.useQuery({
+      address,
+      uniqueId,
+    });
   return (
     <div className={`${styles.card} min-h-100 relative rounded p-5`}>
       {isLoading && <div className="loading">Loading...</div>}
@@ -22,13 +22,23 @@ export default function Card({ address, uniqueId, close }: Props) {
           <Tooltip content={data.address}>
             <div className="title">{data.displayName}</div>
           </Tooltip>
-          <div className="users">{data.users}</div>
-          <div className="balance">{data.balance}</div>
+          <div className="users">Users: {data.users}</div>
+          <div className="balance">
+            Balance: {data.balance.toFixed(3)} {uniqueId}
+          </div>
           <button
             className="close absolute right-3 top-3 cursor-pointer font-extrabold text-red-700"
             onClick={() => close(address, uniqueId)}
           >
             X
+          </button>
+          <button
+            className="close absolute right-2 top-8 cursor-pointer text-xl font-extrabold text-green-700"
+            onClick={() => {
+              refetch().catch((err) => console.error(err));
+            }}
+          >
+            ⟳
           </button>
         </>
       )}
