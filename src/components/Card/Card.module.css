@@ -6,6 +6,7 @@
   border-image: linear-gradient(to top, var(--accent-color), var(--card-color))
     1 10%;
   border-bottom: solid var(--accent-color) var(--border-width);
+  min-height: 270px;
 }
 
 .content {

@@ -1,3 +1,6 @@
+.card {
+  min-height: 270px;
+}
 .form input,
 .form select {
   background-color: var(--bg-color);

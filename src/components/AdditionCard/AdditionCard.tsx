@@ -8,7 +8,9 @@ export default function AdditionCard({ onAdd }: Props) {
   const [address, setAddress] = useState("");
   const [uniqueId, setUniqueId] = useState("DOT");
   return (
-    <div className="card flex items-center justify-center rounded bg-slate-400 p-5">
+    <div
+      className={`${styles.card} flex items-center justify-center rounded bg-slate-400 p-5`}
+    >
       {!showForm && (
         <button
           className="h-full w-full text-4xl font-bold"
