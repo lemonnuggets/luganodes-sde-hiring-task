@@ -37,7 +37,7 @@ export default function Home() {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <h1 className="title mt-20 text-center text-2xl font-bold">
+      <h1 className="title mb-10 mt-10 text-center text-4xl font-bold">
         Luganodes Stake Counter
       </h1>
       <main className="grid grid-cols-4 gap-4 p-8">

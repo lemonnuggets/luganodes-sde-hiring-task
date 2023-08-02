@@ -7,6 +7,7 @@ type Props = {
   uniqueId: string;
   close: (address: string, unique_id: string) => void;
 };
+
 export default function Card({ address, uniqueId, close }: Props) {
   const { data, isLoading, isError, isSuccess, refetch } =
     api.stake.getData.useQuery({
