@@ -21,6 +21,3 @@
     1 10%;
   border-bottom: solid var(--accent-color) var(--border-width);
 }
-.form label {
-  /* color: var(--bg-color); */
-}
