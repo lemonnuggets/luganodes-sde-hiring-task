@@ -26,6 +26,8 @@ export default function AdditionCard({ onAdd }: Props) {
             e.preventDefault();
             onAdd(address, uniqueId);
             setShowForm(false);
+            setAddress("");
+            setUniqueId("DOT");
           }}
         >
           <label htmlFor="address">Address</label>
