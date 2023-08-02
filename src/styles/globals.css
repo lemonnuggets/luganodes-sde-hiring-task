@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 :root {
-  --bg-color: #212121;
+  --bg-color: #101010;
   --card-color: #000000;
   --font-color: #f7f7f9;
   --accent-color: #ff509b;
